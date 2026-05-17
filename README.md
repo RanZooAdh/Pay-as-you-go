@@ -88,7 +88,7 @@ price-before-you-go-qa/
 
 ## 👩‍💻 About the Tester
 
-**Ranjita Adhikari** — Junior QA Engineer  
-Currently undergoing 12-week QA & Payroll training at **Qrius by Qniverse**  
+**Ranjita Adhikari** — QA Engineer  
+
 📧 adhikariranju41@gmail.com  
 🔗 [LinkedIn](#) | [GitHub](#)
