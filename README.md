@@ -32,62 +32,6 @@ This repository contains structured manual test cases written and executed as pa
 
 ---
 
-## 🐛 Bug Summary
-
-### BUG-001 — Broken URL on "Download App Now" CTA (High)
-- **Location:** Privacy Policy page → Download App Now button
-- **Issue:** Tapping the button results in `"This site can't be reached"` error
-- **Impact:** Users cannot download the app from within the Privacy Policy page
-- **Likely Cause:** Invalid URL, missing domain, or broken redirect configuration
-
----
-
-### BUG-002 — Cannot Change Vote from Upvote to Downvote (High)
-- **Location:** Home → Voting System (e.g., Haircut service)
-- **Issue:** After selecting Upvote (Helpful), the user cannot switch to Downvote
-- **Impact:** Vote is locked — users cannot correct a mistaken vote
-- **Reproduced On:** Android 13, iOS 17
-
----
-
-### BUG-003 — Vote Count Logic Inconsistency (High)
-- **Location:** Home → All section → Any service
-- **Issue:** Clicking Thumbs Down decreases Thumbs Up count by 1, but clicking Thumbs Up does NOT decrease Thumbs Down count
-- **Impact:** Vote counts are inaccurate and misleading to users
-- **Steps:**
-  1. Click Thumbs Down → Thumbs Up shows -1 ✅
-  2. Click Thumbs Up → Thumbs Down unchanged ❌
-
----
-
-### BUG-004 — "Learn More" Button Not Responding on Policy Page (Medium)
-- **Location:** Policy Page → Learn More button
-- **Issue:** Clicking "Learn More" triggers no action — no navigation, no modal, no response
-- **Impact:** Users cannot access additional information the button is supposed to provide
-
----
-
-### BUG-005 — "Real Local Reports" Link Not Responding on Policy Page (Medium)
-- **Location:** Policy Page → Real Local Reports link
-- **Issue:** Clicking the link triggers no action whatsoever
-- **Impact:** Dead link; users cannot access the Real Local Reports content
-
----
-
-### BUG-006 — All Navigation Links Redirect to Wrong Page (High)
-- **Location:** Policy Page → Hamburger Menu (Home, Download, FAQ)
-- **Issue:** All three navigation options redirect to the same "Know Before You" page instead of their respective pages
-- **Impact:** Critical navigation failure — users cannot reach Home, Download, or FAQ from the Policy page menu
-- **Expected vs Actual:**
-
-| Menu Option | Expected Destination | Actual Destination |
-|---|---|---|
-| Home | Home page | "Know Before You" page |
-| Download | Download page | "Know Before You" page |
-| FAQ | FAQ page | "Know Before You" page |
-
----
-
 ## ✅ Test Cases That Passed
 
 | Test Case ID | Title |
@@ -99,19 +43,6 @@ This repository contains structured manual test cases written and executed as pa
 
 ## 📄 Full Test Case Documentation
 
-| TC ID | Title | Module | Priority | Status |
-|---|---|---|---|---|
-| TC-PAYG-001 | Download App Now button leads to unreachable site | Privacy Policy / Download CTA | High | FAIL (Bug) |
-| TC-PAYG-002 | Unable to change vote from Upvote to Downvote | Home – Voting System | High | FAIL |
-| TC-PAYG-003 | Privacy Policy page is scrollable | Privacy Policy | Medium | PASS |
-| TC-PAYG-004 | Thumbs Down updates Thumbs Up count but not vice versa | Home | High | FAIL |
-| TC-PAYG-005 | "Learn More" button not responding on Policy Page | Policy Page | Medium | FAIL |
-| TC-PAYG-006 | "Real Local Reports" link not responding on Policy Page | Policy Page | Medium | FAIL |
-| TC-PAYG-007 | Navigation links redirect to incorrect page from Policy menu | Policy Page | High | FAIL |
-
-> Full test case details including preconditions, test data, steps to reproduce, and expected vs actual outcomes are documented in [`test-cases.xlsx`](./test-cases.xlsx) (or see the CSV below).
-
----
 
 ## 🛠️ Tools & Environment
 
